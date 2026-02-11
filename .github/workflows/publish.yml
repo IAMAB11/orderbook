@@ -7,6 +7,8 @@ on:
 
 jobs:
   build_wheels:
+    # Build platform-specific wheels because this package contains C extensions
+    # Each OS/Python combination produces a different binary wheel
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:

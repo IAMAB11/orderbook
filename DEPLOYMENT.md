@@ -26,8 +26,8 @@ The package is automatically deployed to PyPI when a new release is published on
 3. Commit and push the changes
 4. Create a new release on GitHub:
    ```bash
-   git tag v0.6.2
-   git push origin v0.6.2
+   git tag vX.Y.Z  # Replace X.Y.Z with your version number, e.g., v0.6.2
+   git push origin vX.Y.Z
    ```
 5. Go to GitHub Releases and create a new release from the tag
 6. The workflow will automatically:
