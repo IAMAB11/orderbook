@@ -11,6 +11,8 @@ jobs:
     # Each OS/Python combination produces a different binary wheel
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
@@ -40,6 +42,8 @@ jobs:
   build_sdist:
     name: Build source distribution
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v5
 
